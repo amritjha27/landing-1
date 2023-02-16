@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Carrewidth</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-WR7ymF/QjxT+gI8MNyJLH7zC3KyA3Wl8+QbX9a7JjQ2ntuV7U8NNvLz59JU+xn6UzV6FNYIoPNcI/5JpL0x/4w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        footer {
+  background-color: #f9f9f9;
+  color: #555;
+  padding: 30px 0;
+}
+
+footer a {
+  color: #555;
+}
+
+footer h4 {
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social-icons li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-icons li:last-child {
+  margin-right: 0;
+}
+
+.social-icons a {
+  color: #555;
+  display: inline-block;
+  font-size: 20px;
+  line-height: 20px;
+  height: 20px;
+  text-align: center;
+  width: 20px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+}
+
+.social-icons a:hover {
+  color: #fff;
+  background-color: #555;
+  border-color: #555;
+}
+
+@media (max-width: 767px) {
+  footer {
+    text-align: center;
+  }
+  
+  .social-icons {
+    margin-top: 20px;
+  }
+}
+.slider {
+    background: #efeef2;
+    height: 75pt;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    cursor: default;
+    user-select: none;
+    touch-action: none;
+}
+
+.slider:before {
+    left: 0;
+    top: 0;
+}
+.slider:after,
+.slider:before {
+    background: linear-gradient(
+        to right,
+        #efeef2 0%,
+        hsla(0, 0%, 100%, 0) 100%
+    );
+    content: "";
+    height: 75pt;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+}
+.slider:after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+.slider:after,
+.slider:before {
+    background: linear-gradient(
+        to right,
+        #efeef2 0%,
+        hsla(0, 0%, 100%, 0) 100%
+    );
+    content: "";
+    height: 75pt;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+}
+
+.slider .slide-track-1 {
+    animation: scroll-l 30s linear infinite;
+    display: flex;
+    width: 3500px;
+}
+.slider .slide-track-2 {
+    animation: scroll-r 30s linear infinite;
+    display: flex;
+    width: 3500px;
+}
+
+.slider .slide {
+    height: 75pt;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.slider .slide img {
+    width: 180px;
+    padding: 1pc;
+    vertical-align: middle;
+    margin: 0 auto;
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+
+@keyframes scroll-l {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 7));
+    }
+}
+@keyframes scroll-r {
+    100% {
+        transform: translateX(0);
+    }
+    0% {
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+    </style>
+</head>
+
+<div>
+
+
+    <!--popup -->
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <title>Pop-up Form Example</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            integrity="sha512-WR7ymF/QjxT+gI8MNyJLH7zC3KyA3Wl8+QbX9a7JjQ2ntuV7U8NNvLz59JU+xn6UzV6FNYIoPNcI/5JpL0x/4w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap"
+            rel="stylesheet">
+
+        <!-- Icon Font Stylesheet -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+        <!--<style>
+        .exit-button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 30px;
+            margin: 15px;
+            cursor: pointer;
+            z-index: 1;
+            /* Ensures the button appears on top of other form elements */
+        }
+
+        .exit-button span {
+            display: block;
+            width: 35px;
+            height: 35px;
+            text-align: center;
+            line-height: 35px;
+            border: 2px solid #ccc;
+            border-radius: 50%;
+            font-size: 25px;
+            color: #ccc;
+        }
+
+
+
+        .popup {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .popup.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .popup-content {
+            background-color: #fff;
+            padding: 20px;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .close {
+            display: inline-block;
+            border: 2px solid #f3545a;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #f3545a;
+            color: white;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        form input {
+            display: block;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        form input[type="submit"] {
+            background-color: #3f51b5;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #2c3e50;
+        }
+    </style> -->
+    </head>
+
+    <body>
+
+        <div class="popup" id="popup">
+            <!--  <form action="https://formspree.io/f/moqzeovk" method="POST" id="contactform">
+            <div class="popup-content">
+                <span class="close">&times;</span>
+
+
+
+
+                <h1 class="display-7 mb-4">Unlock The Gateway To The Global Education By Scheduling Your Free
+                    Counselling Session
+                </h1>
+                <p class="mb-4">Seek guidance from the experts who are transforming the lives of numerous students each
+                    day.</p>
+                <form>
+                    <div class="row gx-3">
+                        <div class="col-6">
+                            <div class="form-floating">
+                                <input type="text" name="name" class="form-control" id="form-floating-1"
+                                    placeholder="John Doe">
+                                <label for="form-floating-1">Full Name</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-floating mb-3">
+                                <input type="tel" name="phone" class="form-control" id="form-floating-2"
+                                    placeholder="phone">
+                                <label for="form-floating-2">Phone Number</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-floating mb-3">
+                                <input type="email" name="email" class="form-control" id="form-floating-2"
+                                    placeholder="name@example.com">
+                                <label for="form-floating-2">Email address</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-floating mb-3">
+                                <input type="text" name="university" class="form-control" id="form-floating-2"
+                                    placeholder="University">
+                                <label for="form-floating-2">Current University/Institution</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-floating">
+                                <select class="form-select" name="degree" id="floatingSelect"
+                                    aria-label="Financial Consultancy">
+                                    <option value="Bachelors">Bachelors</option>
+                                    <option value="Masters">Masters</option>
+                                </select>
+                                <label for="floatingSelect"> Degree you want to pursue?</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" name="location" id="form-floating-2"
+                                    placeholder="location">
+                                <label for="form-floating-2"> Location</label>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <button class="btn btn-primary w-100 h-100" name="submit" type="submit">Request A
+                                Quote</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </form> -->
+
+        </div>
+
+
+
+
+
+        <!--- <script src="script.js"></script>
+    <script>
+        const popup = document.querySelector('.popup');
+        const close = document.querySelector('.close');
+
+        window.addEventListener('load', function () {
+            popup.classList.add('active');
+        });
+
+        close.addEventListener('click', function () {
+            popup.classList.remove('active');
+        });
+        then(response => {
+    // If the form submission is successful, hide the popup
+    document.getElementById('popup').style.display = 'none';
+  })
+
+    </script> -->
+
+    </body>
+
+    </html>
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
+        <a href="index.html" class="navbar-brand p-0">
+            <h1 class="m-0 text-uppercase text-primary"><img src="img/Career Width  Logo.png" style="  width: 150px;
+                height: auto;
+                display: inline-block;" alt=""></h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span> 
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0 me-n3">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="https://careerwidth.com/about-us/" target="_blank" class="nav-item nav-link">About</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Service</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="https://careerwidth.com/pre-college-advising/" target="_blank"
+                            class="dropdown-item">Pre College Advising</a>
+                        <a href="https://careerwidth.com/undergraduate-advising/" target="_blank"
+                            class="dropdown-item">Undergraduate Advising</a>
+                        <a href="https://careerwidth.com/post-graduate-advising/" target="_blank"
+                            class="dropdown-item">Postgraduate Advising</a>
+                        <a href="https://careerwidth.com/mba-admissions/" target="_blank" class="dropdown-item">MBA
+                            Admissions</a>
+
+                    </div>
+                </div>
+                <a href="#contactform" class="nav-item nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="img/banner2.jpg" style="  width: 100%;
+                    height: auto;" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h5 class="text-white text-uppercase"></h5>
+                            <h1 class="display-1 text-white mb-md-4">Want to study in top Art & Design schools?</h1>
+                            <a href=" #contactform" class="btn btn-primary py-md-3 px-md-5 me-3 rounded-pill">Register
+                                </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/banner3.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h5 class="text-white text-uppercase"></h5>
+                            <h1 class="display-1 text-white mb-md-4">Boost your career with the leading Art & Design
+                                schools through us</h1>
+                            <a href="#contactform" class="btn btn-primary py-md-3 px-md-5 me-3 rounded-pill">Register
+                                </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/banner1.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h5 class="text-white text-uppercase"></h5>
+                            <h1 class="display-1 text-white mb-md-4">Apply now for expert advice on top Art & Design
+                                schools worldwide.</h1>
+
+                            <h1 class="display-1 text-white mb-md-4"></h1>
+                            <a href="#contactform"
+                                class="btn btn-primary py-md-3 px-md-5 me-3 rounded-pill">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+
+            </button>
+
+        </div>
+
+    </div>
+    <!-- Carousel End -->
+
+    <!-- About Start -->
+    <div class="container-fluid bg-secondary p-0" style="margin-top:0px ;">
+        <div class="row g-0">
+            <div class="col-lg-6 py-6 px-5">
+                <h1 class="display-5 mb-4"><span class="text-primary">FREE</span> Expert Counseling for Your Study
+                    Abroad Adventure!
+
+
+
+                </h1>
+                <h4 class="text-primary mb-4">Embark on your study abroad journey by taking a monumental first step with
+                    a <b style="color: black;">30-minute FREE Counseling Session</b>, specially curated by our seasoned
+                    experts, delivering exceptional value to you.
+
+
+
+                </h4>
+                <p class="mb-4">During these 30 minutes, our expert will unveil the proven roadmap to success and
+                    provide you with a comprehensive overview of the necessary steps required for its successful
+                    execution.</p>
+                <a href="#contactform" class="btn btn-primary py-md-3 px-md-5 rounded-pill call-button">Register Now</a>
+            </div>
+            <div class="col-lg-6">
+
+                <div class="h-100 d-flex flex-column justify-content-center bg-primary p-5">
+                    <h1 class=" mb-4"> What Will Be Your Key Takeaways From The Session:
+
+
+
+                    </h1>
+
+                    <div class="d-flex text-white mb-4">
+
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white text-primary rounded-circle mx-auto mb-4"
+                            style="width: 60px; height: 60px;">
+
+                            <i class="fas fa-fist-raised fs-4"></i>
+                        </div>
+
+                        <div class="ps-4 ">
+                            <h3>Strengths & Weaknesses of your profile</h3>
+                            <p class="mb-0">Identify the strengths and weaknesses of your profile to enhance your
+                                chances of admission.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="d-flex text-white mb-4">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white text-primary rounded-circle mx-auto mb-4"
+                            style="width: 60px; height: 60px;">
+                            <i class="fas fa-university fs-4"></i>
+
+
+
+                        </div>
+                        <div class="ps-4">
+                            <h3> Shortlist universities/courses for desired career
+                            </h3>
+                            <p class="mb-0">Shortlist universities and courses that align with your desired career to
+                                make an informed decision.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex text-white mb-4">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white text-primary rounded-circle mx-auto mb-4"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-graduation-cap fs-4"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h3>Scholarships available for you</h3>
+                            <p class="mb-0">Explore scholarships available to support your education and reduce
+                                financial burden.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="d-flex text-white mb-4">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white text-primary rounded-circle mx-auto mb-4"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-globe fs-4"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h3>Post-study work options globally</h3>
+                            <p class="mb-0">Learn about post-study work opportunities in different countries to plan
+                                your career path.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="d-flex text-white mb-0">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white text-primary rounded-circle mx-auto mb-4"
+                            style="width: 60px; height: 60px;">
+                            <i class="fas fa-lightbulb fs-4"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h3>Tips & recommendations to follow</h3>
+                            <p class="mb-0">Follow tips and recommendations to prepare yourself for higher education and
+                                achieve your goals.
+
+
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <div class="px-4 py-5 my-5 text-center">
+        <h1 class="display-5 fw-bold">Student Success Stories: Insights and Experiences with Us
+
+
+
+        </h1>
+        <br>
+
+        <div class="video-wrapper">
+            <div class="video-container">
+                <video src="img/Bharat Testimonial.mp4" style="  border: 10px solid #ccc;
+                border-radius: 5px;
+                overflow: hidden;" loop controls width="640" height="360"></video>
+            </div>
+            <div class="video-container">
+                <video src="img/templates (1).mp4" style="  border: 10px solid #ccc;
+                border-radius: 5px;
+                overflow: hidden;" loop controls width="640" height="360"></video>
+            </div>
+            <div class="video-container">
+                <video src="img/Saranya Testimonial.mp4" style="  border: 10px solid #ccc;
+                border-radius: 5px;
+                overflow: hidden;" loop controls width="640" height="360"></video>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!--centered hero-->
+    <div class="px-4 py-15 my-5 text-center">
+        <h1 class="display-5 fw-bold">Paving The Path To Your Dream Career</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4" style="font-size: 24px;"><strong> You must be dreaming to study abroad and enjoy a
+                    happening life in a foreign country. We at Career Width, have already counselled over 50,000
+                    students and turned their dreams into a reality.
+
+
+
+                </strong></p>
+
+        </div>
+
+
+    </div>
+
+    <!--centered hero-->
+
+    <div class="slider" style="background-color:#fbfbfb;">
+        <div class="slide-track-1">
+            <div class="slide">
+                <img src="img/prat.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="img/risd.png" alt="">
+            </div>
+    
+            <div class="slide">
+                <img src="/img/saic.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="img/ual.jpeg" alt="">
+            </div>
+            <div class="slide">
+                <img src="img/parsons.jpeg" alt="">
+            </div> <div class="slide">
+                <img src="img/scad.jpeg" alt="">
+            </div> <div class="slide">
+                <img src="img/images.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="img/prat.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="img/risd.png" alt="">
+            </div>
+    
+            <div class="slide">
+                <img src="/img/saic.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="img/ual.jpeg" alt="">
+            </div>
+            <div class="slide">
+                <img src="img/parsons.jpeg" alt="">
+            </div> <div class="slide">
+                <img src="img/scad.jpeg" alt="">
+            </div> <div class="slide">
+                <img src="img/images.png" alt="">
+            </div>
+            
+        </div>
+    </div>
+    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Features Start -->
+    <div class="container-fluid py-15 px-5">
+        <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+            <h1 class="display-5 mb-0">Why Choose Us!!!</h1>
+            <hr class="w-25 mx-auto bg-primary">
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-4">
+                <div class="row g-5">
+                    <div class="col-12">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
+                            style="width: 60px; height: 60px;">
+                            <i class="fas fa-plane fs-4 text-white"></i>
+                        </div>
+                        <h3>99% visa success rate</h3>
+                        <p class="mb-0">Our company has a high rate of successful visa applications.
+                        </p>
+                    </div>
+                    <div class="col-12">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-percent fs-4 text-white"></i>
+                        </div>
+                        <h3>100% Admission Rate</h3>
+                        <p class="mb-0">We have sent numerous students abroad to pursue their dreams.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="d-block bg-primary h-100 text-center">
+                    <img class="img-fluid" src="img/grad1.jpg" alt="">
+                    <div class="p-4">
+                        <p class="text-white mb-4">Our decades of experience have resulted in a proven track record of
+                            success in helping students achieve their dreams of studying abroad. With a high rate of
+                            successful visa applications and numerous students sent abroad, we take pride in providing
+                            exceptional service to our clients and guiding them towards achieving their educational
+                            goals.</p>
+                        <a href="https://careerwidth.com/" target="_blank"
+                            class="btn btn-light py-md-3 px-md-5 rounded-pill mb-2">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="row g-5">
+                    <div class="col-12">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-globe fs-4 text-white"></i>
+                        </div>
+                        <h3>1000+ Student Sent Abroad</h3>
+                        <p class="mb-0">Our company has an excellent record of securing admissions for our clients.
+                        </p>
+                    </div>
+                    <div class="col-12">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-user-tie fs-4 text-white"></i>
+                        </div>
+                        <h3>30+ Years of Experience</h3>
+                        <p class="mb-0">With decades of experience, our company has a proven track record of success.
+
+
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features Start -->
+
+
+    <!-- Quote Start -->
+    <form action="https://formspree.io/f/moqzeovk" method="POST" id="contactform">
+        <div class="container-fluid bg-secondary px-0">
+            <div class="row g-0">
+                <div class="col-lg-6 py-6 px-5">
+                    <h1 class="display-7 mb-4">Unlock The Gateway To The Global Education By Scheduling Your Free
+                        Counselling Session
+                    </h1>
+                    <p class="mb-4">Seek guidance from the experts who are transforming the lives of numerous students
+                        each day.</p>
+                    <form>
+                        <div class="row gx-3">
+                            <div class="col-6">
+                                <div class="form-floating">
+                                    <input type="text" name="name" class="form-control" id="form-floating-1"
+                                        placeholder="John Doe">
+                                    <label for="form-floating-1" style="font-size: 14px;">Full Name</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-floating mb-3">
+                                    <input type="tel" name="phone" class="form-control" id="form-floating-2"
+                                        placeholder="phone">
+                                    <label for="form-floating-2" style="font-size: 14px;">Phone Number</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-floating mb-3">
+                                    <input type="email" name="email" class="form-control" id="form-floating-2"
+                                        placeholder="name@example.com">
+                                    <label for="form-floating-2" style="font-size: 14px;">Email address</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-floating mb-3">
+                                    <input type="tel" name="phone" class="form-control" id="form-floating-2"
+                                        placeholder="phone">
+                                    <label for="form-floating-2" style="font-size: 14px;">Country Preference</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-floating">
+                                    <select class="form-select" name="degree" id="floatingSelect"
+                                        aria-label="Financial Consultancy" style="overflow: hidden;">
+                                        <option value="1" style="font-size: 14px;">Bachelors</option>
+                                        <option value="2">Masters</option>
+                                    </select>
+                                    <label for="floatingSelect" style="font-size: 14px;"> Degree</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" name="location" id="form-floating-2"
+                                        placeholder="location">
+                                    <label for="form-floating-2" style="font-size: 14px;"> Current Location</label>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <button class="btn btn-primary w-100 h-100" name="submit" type="submit">Register
+                                    Now</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-6" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100"
+                            src="img/study-abroad-concept-illustration_114360-7673.avif"
+                            style="object-fit: cover;  filter: grayscale(50%);">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- Quote End -->
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer Start -->
+
+  
+    
+    <!-- Footer End -->
+    <footer style="background-color: #142440;">
+        <div class="container" style="background-color: #142440;">
+          <div class="row">
+            <div class="col-md-4">
+              <h4 style="color: white;">Address</h4>
+              <p style="color: white;">Pearls Omaxe Tower, SF 46, Second Floor, Netaji Subhash Place<br> New Delhi, Delhi 110034</p>
+            </div>
+            <div class="col-md-4">
+              <h4 style="color: white;">Contact Us</h4>
+              <p style="color: white;">Email: <a href="mailto:info@example.com" style="color: white;">info@edu-abroad.in</a><br>Phone: <a href="tel:011-4513-6789" style="color: white;">011-4513-6789</a> <br> <a href="tel:+91-8810657782" style="color: white;">+91-8810657782</a> </p>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <h3 class="text-white mb-4" style="color: white;">Follow Us</h3>
+                <div class="d-flex justify-content-center">
+                   
+                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="https://www.facebook.com/careerwidth/"><i
+                            class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="https://www.linkedin.com/in/careerwidth/"><i
+                            class="fab fa-linkedin-in fw-normal"></i></a>
+                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle" href="https://www.instagram.com/careerwidth/"><i
+                            class="fab fa-instagram fw-normal"></i></a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="container-fluid bg-dark text-secondary text-center border-top py-4 px-5"
+        style="border-color: rgba(256, 256, 256, .1) !important;">
+        <p class="m-0">&copy; <a class="text-secondary border-bottom"
+                href="https://careerwidth.com/">careerwidth.com</a>. 2022 All Rights Reserved.
+            </a></p>
+    </div>
+      
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+            class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js">
+
+    </script>
+
+    <script>
+
+    </script>
+    </body>
+
+</html>
